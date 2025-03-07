@@ -6,8 +6,6 @@ function Tes2() {
   // 2. find max age, show the name
   // 3. sort by min age
   // 4. sort by max age
-  const minData = dataJson;
-  const maxData = dataJson;
 
   const findMinAge = () => {
     let person = dataJson[0];
@@ -32,20 +30,11 @@ function Tes2() {
   };
 
   const minSort = () => {
-    let arr = minData;
-    console.log(
-      "Min",
-      arr.sort((a, b) => b.age - a.age)
-    );
+    console.log([...dataJson].sort((a, b) => a.age - b.age));
   };
 
   const maxSort = () => {
-    let arr2 = maxData;
-
-    console.log(
-      "Max",
-      arr2.sort((a, b) => b.age - a.age)
-    );
+    console.log([...dataJson].sort((a, b) => b.age - a.age));
   };
 
   useEffect(() => {
